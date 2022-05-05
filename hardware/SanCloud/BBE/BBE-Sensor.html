@@ -1,0 +1,54 @@
+<!-- 
+Copyright (c) 2022 SanCloud Ltd
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<script type="text/javascript">
+    RED.nodes.registerType('get sensor values',{
+        category: 'SanCloud',
+        color: '#777777',
+        defaults: {
+            name: {value:""},
+            sensor: {value: "", required:true},
+            time: {value: "", required:true}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "SanCloud.svg",
+        label: function() {
+            return this.name||"get sensor values";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="get sensor values">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <!-- <div class="form-row">
+        <label for="node-input-time"><i class="fa fa-tag"></i> Time interval</label>
+        <input type="text" id="node-input-time" placeholder="2" style="width:12%">
+        <select type="text" id="node-input-time-type" placeholder="Seconds" style="width:20%">
+            <optgroup label="Select Time">
+                <option name="Seconds" value="Seconds">Seconds</option>
+                <option name="Minutes" value="Minutes">Minutes</option>
+                <option name="Hours" value="Hours">Hours</option>
+            </optgroup>
+        </select>
+    </div> -->
+
+    <div class="form-row">
+        <label for="node-input-sensor"><i class="fa fa-tag"></i> Sensor</label>
+        <select type="text" id="node-input-sensor" placeholder="Select Sensor">
+            <optgroup label="Select Sensor">
+                <option name="Geo" value="Geo">Accelerometer and Gyro</option>
+                <option name="Temp" value="Temp">Pressure and Temperature</option>
+            </optgroup>
+        </select>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="get sensor values">
+    <p>A custom node that gets sensor values from the board and returns them as a JSON object</p>
+</script>

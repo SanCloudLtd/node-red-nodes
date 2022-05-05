@@ -1,0 +1,27 @@
+{
+    "name": "node-red-node-bbe",
+    "version": "1.0.0",
+    "description": "A custom node that allow the user to select the sensor they wish to read from and output values as a JSON object",
+    "node-red": {
+        "nodes": {
+            "get-sensors": "BBE-Sensor.js"
+        }
+    },
+    "repository" : {
+        "type":"git",
+        "url":"https://github.com/SanCloudLtd/node-red-nodes"
+    },
+    "license": "Apache-2.0",
+    "keywords": [
+        "node-red",
+        "beagleboneenhance",
+        "beaglebone",
+        "bbe",
+        "octalbonescript"
+    ],
+    "contributors": [
+        {
+            "name": "Andrew Walker"
+        }
+    ]
+}
